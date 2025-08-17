@@ -255,12 +255,12 @@ Axiom codes are assigned as follows.  -- means ignored.
     12  x   y   z   Push ICS.  P1 is used for both x and ph.
     13  x   y   z   Push B6a1
     14  x   y   z   Push B6a2
-    15  x   ph  --  Generalization rule.  Pops a theorem of statement ph;
+    15  x   --  --  Generalization rule.  Pops a theorem of statement ph;
                     proves A. x ph.
-    >16 ps  ph  maj Detachment rule.  Pops a minor premise (proof of ph), then
+    >16 ps  --  --  Detachment rule.  Pops a minor premise (proof of ph), then
                     pops a major premise which is expected to match
-                    ( ph -> ps ) and P3.  If the major premise matches,
-                    pushes ps, else pushes moot.
+                    ( ph -> ps ).  If the major premise matches, pushes ps,
+                    else pushes moot.
 
 # Use of variables
 
