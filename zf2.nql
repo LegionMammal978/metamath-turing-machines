@@ -462,6 +462,9 @@ proc main() {
     par3(); par1(); weq(); wim();  wex();  select();
     */
 
+    safety(param1, param3);
+    safety(param2, param3);
+
     /*
     Below are descriptions in this machine's language of various axioms and
     schemes which were not used in the final system, but which may be useful
@@ -576,8 +579,6 @@ proc main() {
     par3(); par3(); par2(); wel(); par1(); wa(); wex(); wim(); wal(); wim(); wal(); wa(); wex();
     select();
 
-    safety(param1, param3);
-    safety(param2, param3);
     /* B6a1 */
     par1(); par2(); weq();  par3(); par1(); par2(); weq(); wal();  wim();
     select();

@@ -167,186 +167,189 @@ NAME: main() ORDER: 16 EFFICIENCY: 15051 / 65536
     01001011         -> weq()
     0100110          -> wex()
     0100111000       -> select()
-    0100111001       -> noop.6
-    010011101        -> par2()
-    010011110        -> par3()
-    010011111        -> par2()
+    0100111001       -> safety(_Gparam1,_Gparam3)
+    0100111010       -> safety(_Gparam2,_Gparam3)
+    0100111011       -> noop.6
+    010011110        -> par2()
+    010011111        -> par3()
     010100000        -> par2()
-    010100001        -> par3()
-    01010001         -> wel()
-    010100100        -> par2()
-    010100101        -> par1()
-    01010011         -> wel()
-    01010100         -> wim()
-    01010101         -> wal()
-    010101100        -> par3()
-    010101101        -> par2()
-    01010111         -> wel()
-    01011000         -> wim()
-    01011001         -> wal()
-    0101101          -> wex()
-    0101110000       -> select()
-    0101110001       -> noop.6
-    010111001        -> par2()
-    010111010        -> par3()
-    010111011        -> par2()
-    010111100        -> par3()
+    010100001        -> par2()
+    010100010        -> par3()
+    010100011        -> noop.7
+    01010010         -> wel()
+    010100110        -> par2()
+    010100111        -> par1()
+    01010100         -> wel()
+    01010101         -> wim()
+    01010110         -> wal()
+    010101110        -> par3()
+    010101111        -> par2()
+    01011000         -> wel()
+    01011001         -> wim()
+    01011010         -> wal()
+    01011011         -> noop.8
+    0101110          -> wex()
+    0101111000       -> select()
+    0101111001       -> noop.6
     010111101        -> par2()
-    01011111         -> wel()
-    011000000        -> par2()
-    011000001        -> par1()
+    010111110        -> par3()
+    010111111        -> par2()
+    011000000        -> par3()
+    011000001        -> par2()
     01100001         -> wel()
-    0110001          -> wa()
-    0110010          -> wex()
-    011001100        -> par3()
-    011001101        -> par2()
-    01100111         -> wel()
-    01101000         -> wim()
-    01101001         -> wal()
-    0110101          -> wex()
-    0110110000       -> select()
-    0110110001       -> noop.6
-    011011001        -> par2()
-    011011010        -> par3()
-    011011011        -> par3()
-    011011100        -> par1()
-    011011101        -> noop.7
-    01101111         -> wel()
+    011000100        -> par2()
+    011000101        -> par1()
+    01100011         -> wel()
+    0110010          -> wa()
+    0110011          -> wex()
+    011010000        -> par3()
+    011010001        -> par2()
+    01101001         -> wel()
+    01101010         -> wim()
+    01101011         -> wal()
+    0110110          -> wex()
+    0110111000       -> select()
+    0110111001       -> noop.6
+    011011101        -> par2()
+    011011110        -> par3()
+    011011111        -> par3()
     011100000        -> par1()
-    011100001        -> par2()
-    011100010        -> par1()
-    011100011        -> noop.7
-    01110010         -> wal()
-    01110011         -> noop.8
-    0111010          -> wex()
-    011101100        -> par3()
-    011101101        -> par2()
-    01110111         -> wel()
-    01111000         -> wim()
-    01111001         -> wim()
-    011110100        -> par3()
-    011110101        -> par2()
-    01111011         -> wel()
-    011111000        -> par1()
-    011111001        -> par1()
-    01111101         -> noop.8
-    0111111          -> wex()
-    10000000         -> wim()
-    10000001         -> noop.8
-    1000001          -> wa()
-    10000100         -> wal()
-    100001010        -> par1()
-    100001011        -> par1()
-    100001100        -> par2()
-    100001101        -> noop.7
-    10000111         -> wel()
-    100010000        -> par3()
-    100010001        -> par2()
-    100010010        -> par1()
-    100010011        -> noop.7
-    10001010         -> wal()
-    100010110        -> par3()
-    100010111        -> par3()
-    100011000        -> par2()
-    100011001        -> noop.7
-    10001101         -> wel()
-    100011100        -> par1()
+    011100001        -> noop.7
+    01110001         -> wel()
+    011100100        -> par1()
+    011100101        -> par2()
+    011100110        -> par1()
+    011100111        -> noop.7
+    01110100         -> wal()
+    01110101         -> noop.8
+    0111011          -> wex()
+    011110000        -> par3()
+    011110001        -> par2()
+    01111001         -> wel()
+    01111010         -> wim()
+    01111011         -> wim()
+    011111000        -> par3()
+    011111001        -> par2()
+    01111101         -> wel()
+    011111100        -> par1()
+    011111101        -> par1()
+    01111111         -> noop.8
+    1000000          -> wex()
+    10000010         -> wim()
+    10000011         -> noop.8
+    1000010          -> wa()
+    10000110         -> wal()
+    100001110        -> par1()
+    100001111        -> par1()
+    100010000        -> par2()
+    100010001        -> noop.7
+    10001001         -> wel()
+    100010100        -> par3()
+    100010101        -> par2()
+    100010110        -> par1()
+    100010111        -> noop.7
+    10001100         -> wal()
+    100011010        -> par3()
+    100011011        -> par3()
+    100011100        -> par2()
     100011101        -> noop.7
-    10001111         -> noop.8
-    1001000          -> wa()
-    1001001          -> wex()
-    10010100         -> wim()
-    10010101         -> wal()
+    10001111         -> wel()
+    100100000        -> par1()
+    100100001        -> noop.7
+    10010001         -> noop.8
+    1001001          -> wa()
+    1001010          -> wex()
     10010110         -> wim()
     10010111         -> wal()
-    1001100          -> wa()
-    1001101          -> wex()
-    1001110000       -> select()
-    1001110001       -> safety(_Gparam1,_Gparam3)
-    1001110010       -> safety(_Gparam2,_Gparam3)
-    1001110011       -> noop.6
-    100111010        -> par1()
-    100111011        -> par2()
-    10011110         -> weq()
-    100111110        -> par3()
-    100111111        -> par1()
-    101000000        -> par2()
-    101000001        -> noop.7
-    10100001         -> weq()
-    10100010         -> wal()
-    10100011         -> wim()
-    1010010000       -> select()
-    1010010001       -> noop.6
-    101001001        -> par1()
-    101001010        -> par2()
-    101001011        -> noop.7
-    10100110         -> wel()
-    101001110        -> par3()
-    101001111        -> par1()
-    101010000        -> par2()
-    101010001        -> noop.7
-    10101001         -> wel()
-    10101010         -> wal()
-    10101011         -> wim()
-    1010110000       -> select()
-    1010110001       -> noop.6
-    101011001        -> cparam(_Gparam2)
-    101011010        -> par1()
-    101011011        -> par2()
-    10101110         -> wal()
-    1010111100       -> select()
-    1010111101       -> noop.6
-    101011111        -> cparam(_Gparam2)
-    101100000        -> cparam(_Gparam3)
-    101100001        -> par2()
-    101100010        -> par1()
-    101100011        -> noop.7
-    10110010         -> wim()
-    1011001100000    -> transfer(_Gtopwff,_scratch_1,_scratch_2)
-    10110011000010   -> transfer(_scratch_2,_Gtopwff)
-    10110011000011   -> noop.2
-    1011001100010    -> transfer(_Gparam3,_scratch_2,_scratch_3)
-    10110011000110   -> transfer(_scratch_3,_Gparam3)
-    1011001100011100 -> reg_decr(_scratch_2) #gen39
-    1011001100011101 -> main().jump(5,2) -> gen40
-    1011001100011110 -> reg_decr(_scratch_1)
-    1011001100011111 -> main().jump(25,4) -> gen41
-    1011001100100000 -> main().jump(28,6) -> gen39
-    1011001100100001 -> reg_decr(_scratch_1) #gen40
-    1011001100100010 -> main().jump(17,4) -> gen42
-    1011001100100011 -> noop.0
-    10110011001001   -> transfer(_scratch_1)
-    1011001100101000 -> main().jump(37,5) -> gen37
-    1011001100101001 -> noop.0 #gen41
-    101100110010101  -> noop.1
-    10110011001011   -> transfer(_scratch_2)
-    1011001100110000 -> main().jump(37,5) -> gen37
-    1011001100110001 -> noop.0 #gen42
-    101100110011001  -> noop.1
-    10110011001101   -> noop.2
-    1011001100111    -> transfer(_Gparam1,_Gtopwff,_scratch_2)
-    10110011010000   -> transfer(_scratch_2,_Gparam1)
-    1011001101000100 -> main().jump(12,3) -> gen38
-    1011001101000101 -> noop.0 #gen37
-    101100110100011  -> noop.1
-    10110011010010   -> transfer(_Gtopwff)
-    10110011010011   -> noop.2 #gen38
-    101100110101     -> noop.4
-    10110011011      -> noop.5
-    1011001110       -> select()
-    1011001111000    -> transfer(_Gtopwff,_scratch_1,_scratch_2)
-    10110011110010   -> transfer(_scratch_1,_Gtopwff)
-    1011001111001100 -> reg_decr(_scratch_2)
-    1011001111001101 -> main().jump(14,3) -> gen43
-    1011001111001110 -> reg_decr(_scratch_2)
-    1011001111001111 -> main().jump(21,4) -> gen45
-    10110011110100   -> transfer(_scratch_2)
-    1011001111010100 -> main().jump(2,1) -> gen43
-    1011001111010101 -> halt #gen45
-    101100111101011  -> noop.1 #gen43 #gen44
-    1011001111011    -> noop.3
-    10110011111      -> noop.5
-    101101           -> noop.10
+    10011000         -> wim()
+    10011001         -> wal()
+    1001101          -> wa()
+    1001110          -> wex()
+    1001111000       -> select()
+    1001111001       -> noop.6
+    100111101        -> par1()
+    100111110        -> par2()
+    100111111        -> noop.7
+    10100000         -> weq()
+    101000010        -> par3()
+    101000011        -> par1()
+    101000100        -> par2()
+    101000101        -> noop.7
+    10100011         -> weq()
+    10100100         -> wal()
+    10100101         -> wim()
+    1010011000       -> select()
+    1010011001       -> noop.6
+    101001101        -> par1()
+    101001110        -> par2()
+    101001111        -> noop.7
+    10101000         -> wel()
+    101010010        -> par3()
+    101010011        -> par1()
+    101010100        -> par2()
+    101010101        -> noop.7
+    10101011         -> wel()
+    10101100         -> wal()
+    10101101         -> wim()
+    1010111000       -> select()
+    1010111001       -> noop.6
+    101011101        -> cparam(_Gparam2)
+    101011110        -> par1()
+    101011111        -> par2()
+    10110000         -> wal()
+    1011000100       -> select()
+    1011000101       -> noop.6
+    101100011        -> cparam(_Gparam2)
+    101100100        -> cparam(_Gparam3)
+    101100101        -> par2()
+    101100110        -> par1()
+    101100111        -> noop.7
+    10110100         -> wim()
+    1011010100000    -> transfer(_Gtopwff,_scratch_1,_scratch_2)
+    10110101000010   -> transfer(_scratch_2,_Gtopwff)
+    10110101000011   -> noop.2
+    1011010100010    -> transfer(_Gparam3,_scratch_2,_scratch_3)
+    10110101000110   -> transfer(_scratch_3,_Gparam3)
+    1011010100011100 -> reg_decr(_scratch_2) #gen39
+    1011010100011101 -> main().jump(5,2) -> gen40
+    1011010100011110 -> reg_decr(_scratch_1)
+    1011010100011111 -> main().jump(25,4) -> gen41
+    1011010100100000 -> main().jump(28,6) -> gen39
+    1011010100100001 -> reg_decr(_scratch_1) #gen40
+    1011010100100010 -> main().jump(17,4) -> gen42
+    1011010100100011 -> noop.0
+    10110101001001   -> transfer(_scratch_1)
+    1011010100101000 -> main().jump(37,5) -> gen37
+    1011010100101001 -> noop.0 #gen41
+    101101010010101  -> noop.1
+    10110101001011   -> transfer(_scratch_2)
+    1011010100110000 -> main().jump(37,5) -> gen37
+    1011010100110001 -> noop.0 #gen42
+    101101010011001  -> noop.1
+    10110101001101   -> noop.2
+    1011010100111    -> transfer(_Gparam1,_Gtopwff,_scratch_2)
+    10110101010000   -> transfer(_scratch_2,_Gparam1)
+    1011010101000100 -> main().jump(12,3) -> gen38
+    1011010101000101 -> noop.0 #gen37
+    101101010100011  -> noop.1
+    10110101010010   -> transfer(_Gtopwff)
+    10110101010011   -> noop.2 #gen38
+    101101010101     -> noop.4
+    10110101011      -> noop.5
+    1011010110       -> select()
+    1011010111000    -> transfer(_Gtopwff,_scratch_1,_scratch_2)
+    10110101110010   -> transfer(_scratch_1,_Gtopwff)
+    1011010111001100 -> reg_decr(_scratch_2)
+    1011010111001101 -> main().jump(14,3) -> gen43
+    1011010111001110 -> reg_decr(_scratch_2)
+    1011010111001111 -> main().jump(21,4) -> gen45
+    10110101110100   -> transfer(_scratch_2)
+    1011010111010100 -> main().jump(2,1) -> gen43
+    1011010111010101 -> halt #gen45
+    101101011101011  -> noop.1 #gen43 #gen44
+    1011010111011    -> noop.3
+    10110101111      -> noop.5
+    1011011          -> noop.9
     10111            -> noop.11
     11               -> noop.14
 
@@ -356,8 +359,8 @@ NAME: noop.14 ORDER: 14 EFFICIENCY: 0 / 16384
 noop.11
 NAME: noop.11 ORDER: 11 EFFICIENCY: 0 / 2048
 
-noop.10
-NAME: noop.10 ORDER: 10 EFFICIENCY: 0 / 1024
+noop.9
+NAME: noop.9 ORDER: 9 EFFICIENCY: 0 / 512
 
 noop.5
 NAME: noop.5 ORDER: 5 EFFICIENCY: 0 / 32
@@ -1132,6 +1135,43 @@ v_0_()
 NAME: v_0_() ORDER: 5 EFFICIENCY: 20 / 32
           -> pushwff()
 
+wex()
+NAME: wex() ORDER: 9 EFFICIENCY: 234 / 512
+    00        -> wn()
+    010       -> cons()
+    011       -> v_4_()
+    100       -> cons()
+    101       -> noop.6
+    11        -> wn()
+
+wn()
+NAME: wn() ORDER: 7 EFFICIENCY: 64 / 128
+    0       -> v_3_()
+    1       -> cons()
+
+v_3_()
+NAME: v_3_() ORDER: 6 EFFICIENCY: 23 / 64
+    0      -> pushwff()
+    100000 -> reg_incr(_Gtopwff)
+    100001 -> reg_incr(_Gtopwff)
+    100010 -> reg_incr(_Gtopwff)
+    100011 -> noop.0
+    1001   -> noop.2
+    101    -> noop.3
+    11     -> noop.4
+
+wa()
+NAME: wa() ORDER: 9 EFFICIENCY: 232 / 512
+    00        -> wn()
+    010       -> cons()
+    011       -> v_2_()
+    100       -> cons()
+    101       -> noop.6
+    11        -> wn()
+
+noop.8
+NAME: noop.8 ORDER: 8 EFFICIENCY: 0 / 256
+
 safety(_Gparam2,_Gparam3)
 NAME: safety(_Gparam2,_Gparam3) ORDER: 6 EFFICIENCY: 34 / 64
     000    -> transfer(_Gparam2,_scratch_1,_scratch_2)
@@ -1264,43 +1304,6 @@ NAME: transfer(_Gparam1,_scratch_1,_scratch_2).jump(0,3) ORDER: 0 EFFICIENCY: 1 
 
 transfer(_Gparam1,_scratch_1,_scratch_2).jump(5,2)
 NAME: transfer(_Gparam1,_scratch_1,_scratch_2).jump(5,2) ORDER: 0 EFFICIENCY: 1 / 1
-
-wex()
-NAME: wex() ORDER: 9 EFFICIENCY: 234 / 512
-    00        -> wn()
-    010       -> cons()
-    011       -> v_4_()
-    100       -> cons()
-    101       -> noop.6
-    11        -> wn()
-
-wn()
-NAME: wn() ORDER: 7 EFFICIENCY: 64 / 128
-    0       -> v_3_()
-    1       -> cons()
-
-v_3_()
-NAME: v_3_() ORDER: 6 EFFICIENCY: 23 / 64
-    0      -> pushwff()
-    100000 -> reg_incr(_Gtopwff)
-    100001 -> reg_incr(_Gtopwff)
-    100010 -> reg_incr(_Gtopwff)
-    100011 -> noop.0
-    1001   -> noop.2
-    101    -> noop.3
-    11     -> noop.4
-
-wa()
-NAME: wa() ORDER: 9 EFFICIENCY: 232 / 512
-    00        -> wn()
-    010       -> cons()
-    011       -> v_2_()
-    100       -> cons()
-    101       -> noop.6
-    11        -> wn()
-
-noop.8
-NAME: noop.8 ORDER: 8 EFFICIENCY: 0 / 256
 
 unpair(_Gt2,_Gprooflist,_Gprooflist)
 NAME: unpair(_Gt2,_Gprooflist,_Gprooflist) ORDER: 5 EFFICIENCY: 21 / 32
