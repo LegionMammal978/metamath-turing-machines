@@ -116,8 +116,8 @@ Union, we include only one additional scheme, which implies the traditional
 schemes of Separation and Collection (which, unlike Replacement, is usable
 even without Extensionality), as well as the Axiom of Infinity.
 
-This new scheme, after a few simplifications, renaming some instances of x to
-w to avoid shadowing, and assuming that P does not use y, is:
+This new scheme, after a few simplifications, and renaming some instances of x
+to w to avoid shadowing, is:
 
 E. y (
     A. z e. w ( E. x P -> z e. y )
@@ -189,9 +189,9 @@ Our final axiom set is:
 
     POW E. y A. z ( A. y ( y e. z -> y e. x ) -> z e. y )
     UNI E. y A. z ( E. y ( z e. y /\ y e. x ) -> z e. y )
-    ICS E. y ( A. z ( ( z e. x -> ( E. x A. y P -> z e. y ) )
+    ICS E. y ( A. z ( ( z e. x -> ( E. x P -> z e. y ) )
         /\ ( z e. y -> E. x P ) ) /\ A. x ( x e. y -> A. z
-        ( A. y P -> E. z ( z e. y /\ P ) ) ) )
+        ( P -> E. z ( z e. y /\ P ) ) ) )
                                                                                |
 # Encoding wffs and proofs as integers
 
@@ -252,7 +252,7 @@ Axiom codes are assigned as follows.  -- means ignored.
     9   x   y   --  Push B7
     10  x   y   z   Push POW
     11  x   y   z   Push UNI
-    12  x   y   z   Push ICS.  P1 is used for both x and ph.
+    12  x   y   z   Push ICS.  P2 is used for both y and ph.
     13  x   y   z   Push B6a1
     14  x   y   z   Push B6a2
     15  x   --  --  Generalization rule.  Pops a theorem of statement ph;
@@ -571,12 +571,12 @@ proc main() {
     */
 
     /* INF+COL+SEP */
-    /* E. y ( A. z ( ( z e. x -> ( E. x A. y P -> z e. y ) ) /\ ( z e. y -> E. x P ) ) /\ A. x ( x e. y -> A. z ( A. y P -> E. z ( z e. y /\ P ) ) ) ) */
+    /* E. y ( A. z ( ( z e. x -> ( E. x P -> z e. y ) ) /\ ( z e. y -> E. x P ) ) /\ A. x ( x e. y -> A. z ( P -> E. z ( z e. y /\ P ) ) ) ) */
 
-    par2(); par3(); par3(); par1(); wel(); par1(); par2(); par1(); wal(); wex(); par3(); par2(); wel(); wim(); wim();
-    par3(); par2(); wel(); par1(); par1(); wex(); wim(); wa();
-    wal(); par1(); par1(); par2(); wel(); par3(); par2(); par1(); wal();
-    par3(); par3(); par2(); wel(); par1(); wa(); wex(); wim(); wal(); wim(); wal(); wa(); wex();
+    par2(); par3(); par3(); par1(); wel(); par1(); par2(); wex(); par3(); par2(); wel(); wim(); wim();
+    par3(); par2(); wel(); par1(); par2(); wex(); wim(); wa();
+    wal(); par1(); par1(); par2(); wel(); par3(); par2();
+    par3(); par3(); par2(); wel(); par2(); wa(); wex(); wim(); wal(); wim(); wal(); wa(); wex();
     select();
 
     /* B6a1 */
